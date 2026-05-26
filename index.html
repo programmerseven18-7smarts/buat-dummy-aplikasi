@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Pembuatan Aplikasi Dummy dengan v0.dev</title>
+    <meta name="description" content="Tutorial interaktif alur pembuatan dummy aplikasi menggunakan AI v0.dev, integrasi GitHub, deploy Vercel, dan sinkronisasi local development.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background elements for high premium feel -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div>
+                    <h1 class="logo-title">v0 Guide</h1>
+                    <span class="logo-subtitle">Interactive Dev Pipeline</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-item active" data-target="overview-section">
+                    <i class="fa-solid fa-compass"></i> Overview Alur
+                </button>
+                <button class="nav-item" data-target="step1-section">
+                    <span class="step-badge">01</span>
+                    <i class="fa-solid fa-comments"></i> Diskusi AI & Prompt
+                </button>
+                <button class="nav-item" data-target="step2-section">
+                    <span class="step-badge">02</span>
+                    <i class="fa-solid fa-code-fork"></i> Alur Kerja v0.dev
+                </button>
+                <button class="nav-item" data-target="step3-section">
+                    <span class="step-badge">03</span>
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Deploy & Local Sync
+                </button>
+                <button class="nav-item" data-target="playground-section">
+                    <i class="fa-solid fa-terminal"></i> Prompt Generator
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="author-info">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Template Acuan Developer</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-title">
+                    <h2>Panduan Pembuatan Aplikasi Dummy</h2>
+                    <p class="subtitle">Alur kerja modern terintegrasi v0.dev, GitHub, Vercel, dan Local Environment</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary btn-icon" id="btn-start-tour">
+                        <i class="fa-solid fa-play"></i> Mulai Tur Interaktif
+                    </button>
+                </div>
+            </header>
+
+            <!-- SECTION 1: OVERVIEW ALUR (INTERACTIVE TIMELINE) -->
+            <section id="overview-section" class="content-section active-section animate-fade-in">
+                <div class="card hero-card">
+                    <div class="hero-content">
+                        <span class="badge">Workflow Overview</span>
+                        <h3>Dari Ide Menjadi Code Lokal dengan Cepat</h3>
+                        <p>Visualisasi interaktif siklus pembuatan dummy aplikasi. Klik setiap tahapan untuk melihat detail ringkasnya secara langsung.</p>
+                    </div>
+                    <div class="hero-visual">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                </div>
+
+                <!-- Interactive Workflow Flowchart -->
+                <div class="workflow-visualizer-container">
+                    <h4 class="section-title-sm">Peta Alur Kerja Interaktif</h4>
+                    <div class="flowchart-wrapper">
+                        <!-- Node 1: AI Discussion -->
+                        <div class="flow-node active" id="node-ai" data-step="step1-section">
+                            <div class="node-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div class="node-details">
+                                <span class="node-num">Langkah 1</span>
+                                <h5 class="node-title">Diskusi & Prompt AI</h5>
+                                <p class="node-desc">Tentukan fitur & buat blueprint prompt yang solid.</p>
+                            </div>
+                        </div>
+
+                        <div class="flow-connector active"><i class="fa-solid fa-chevron-right"></i></div>
+
+                        <!-- Node 2: Choice (v0.dev) -->
+                        <div class="flow-node-choice">
+                            <div class="choice-split-line"></div>
+                            
+                            <!-- Branch A: Template -->
+                            <div class="flow-node branch-node" id="node-v0-template" data-step="step2-section" data-branch="template">
+                                <div class="node-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="node-details">
+                                    <span class="node-num">Langkah 2A</span>
+                                    <h5 class="node-title">Import Repo GitHub</h5>
+                                    <p class="node-desc">Gunakan boilerplate yang sudah di-publish public.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Branch B: Scratch -->
+                            <div class="flow-node branch-node" id="node-v0-scratch" data-step="step2-section" data-branch="scratch">
+                                <div class="node-icon"><i class="fa-solid fa-cube"></i></div>
+                                <div class="node-details">
+                                    <span class="node-num">Langkah 2B</span>
+                                    <h5 class="node-title">Generate v0 Scratch</h5>
+                                    <p class="node-desc">Mulai dari nol langsung menggunakan AI v0.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-connector active"><i class="fa-solid fa-chevron-right"></i></div>
+
+                        <!-- Node 3: Deploy & Sync -->
+                        <div class="flow-node" id="node-sync" data-step="step3-section">
+                            <div class="node-icon"><i class="fa-solid fa-rotate"></i></div>
+                            <div class="node-details">
+                                <span class="node-num">Langkah 3</span>
+                                <h5 class="node-title">Deploy & Local Sync</h5>
+                                <p class="node-desc">Deploy Vercel & Pull Request ke Local Dev (Cursor/Antigravity).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Cards Grid based on current selection -->
+                <div class="info-grid">
+                    <div class="card info-card">
+                        <div class="card-icon icon-ai"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h4>1. Diskusi Awal</h4>
+                        <p>Diskusi dengan AI untuk menentukan skema database dummy, relasi tabel, dan batasan fungsionalitas sistem agar prompt lebih terarah.</p>
+                    </div>
+                    <div class="card info-card">
+                        <div class="card-icon icon-v0"><i class="fa-solid fa-wand-magic"></i></div>
+                        <h4>2. v0 Prototyping</h4>
+                        <p>Membuat visualisasi web apps dalam hitungan detik. Gunakan UI components bawaan shadcn/ui dan layout modern secara langsung.</p>
+                    </div>
+                    <div class="card info-card">
+                        <div class="card-icon icon-sync"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4>3. Local Integration</h4>
+                        <p>Sambungkan project ke GitHub, lakukan merge PR dari v0, lalu tarik ke local compiler (VS Code, Cursor, Antigravity) untuk logic lanjutan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: STEP 1 - DISCUSSION & PROMPT -->
+            <section id="step1-section" class="content-section animate-fade-in">
+                <div class="section-header-box">
+                    <span class="step-indicator">Langkah 01</span>
+                    <h3>Diskusi AI & Formulasi Prompt</h3>
+                    <p>Sebelum masuk ke v0, diskusikan fitur sistem dengan LLM untuk mematangkan konsep dan struktur.</p>
+                </div>
+
+                <div class="two-column">
+                    <!-- Left: Explanation of AI Discussion -->
+                    <div class="card">
+                        <h4>Menyusun Fitur & Requirement</h4>
+                        <p class="p-highlight">Jangan langsung menulis code. Minta AI merumuskan sistem aplikasi dummy Anda terlebih dahulu.</p>
+                        
+                        <div class="interactive-steps-list">
+                            <div class="step-list-item">
+                                <span class="num">1</span>
+                                <div>
+                                    <h5>Tentukan Target User & Peran</h5>
+                                    <p>Misal: Admin, Manajer, Operator (Tentukan hak aksesnya).</p>
+                                </div>
+                            </div>
+                            <div class="step-list-item">
+                                <span class="num">2</span>
+                                <div>
+                                    <h5>Tentukan Modul Utama</h5>
+                                    <p>Tabel Master, Form Input, Dashboard Statistik, Report.</p>
+                                </div>
+                            </div>
+                            <div class="step-list-item">
+                                <span class="num">3</span>
+                                <div>
+                                    <h5>Buat Skenario Data Dummy</h5>
+                                    <p>Minta AI menyiapkan JSON dummy data yang realistis untuk ditampilkan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Mandatory Prompt Requirements (INTERACTIVE) -->
+                    <div class="card req-card">
+                        <h4><i class="fa-solid fa-clipboard-list text-primary"></i> 4 Poin Wajib dalam Prompt v0</h4>
+                        <p>Pastikan prompt Anda untuk v0 mengandung 4 elemen kunci berikut agar aplikasi dummy responsif & interaktif:</p>
+
+                        <div class="req-items-container">
+                            <!-- Req 1 -->
+                            <div class="req-item" data-index="1">
+                                <div class="req-header">
+                                    <div class="req-check"><i class="fa-solid fa-circle-check"></i></div>
+                                    <h5>1. Tema Warna Spesifik</h5>
+                                    <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+                                </div>
+                                <div class="req-body">
+                                    <p>Tentukan palet warna agar desain memiliki kecocokan visual. Contoh: <em>"Gunakan skema warna dark premium dengan aksen indigo dan violet."</em></p>
+                                    <div class="demo-box color-demo">
+                                        <span class="color-swatch sw-1"></span>
+                                        <span class="color-swatch sw-2"></span>
+                                        <span class="color-swatch sw-3"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Req 2 -->
+                            <div class="req-item" data-index="2">
+                                <div class="req-header">
+                                    <div class="req-check"><i class="fa-solid fa-circle-check"></i></div>
+                                    <h5>2. Menu & Hak Akses (RBAC)</h5>
+                                    <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+                                </div>
+                                <div class="req-body">
+                                    <p>Sediakan switch role di UI untuk membedakan dashboard Admin, Operator, dll. secara interaktif.</p>
+                                    <div class="demo-box">
+                                        <div class="mock-rbac">
+                                            <span>Role:</span>
+                                            <span class="mock-role-badge active">Admin</span>
+                                            <span class="mock-role-badge">Staff</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Req 3 -->
+                            <div class="req-item" data-index="3">
+                                <div class="req-header">
+                                    <div class="req-check"><i class="fa-solid fa-circle-check"></i></div>
+                                    <h5>3. Dropdown Searchable</h5>
+                                    <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+                                </div>
+                                <div class="req-body">
+                                    <p>Pastikan dropdown pilihan memiliki fitur pencarian untuk memudahkan jika data dropdown sangat panjang.</p>
+                                    <div class="demo-box">
+                                        <div class="mock-search-dropdown">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input type="text" placeholder="Cari data di dropdown..." disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Req 4 -->
+                            <div class="req-item" data-index="4">
+                                <div class="req-header">
+                                    <div class="req-check"><i class="fa-solid fa-circle-check"></i></div>
+                                    <h5>4. Tabel Responsive ke Card</h5>
+                                    <i class="fa-solid fa-chevron-down toggle-arrow"></i>
+                                </div>
+                                <div class="req-body">
+                                    <p>Saat dibuka di HP, layout tabel horizontal harus berubah otomatis menjadi list card agar user-friendly.</p>
+                                    <div class="demo-box responsive-demo">
+                                        <div class="view-toggle">
+                                            <button class="view-btn active" id="btn-view-desktop"><i class="fa-solid fa-desktop"></i> Desktop (Tabel)</button>
+                                            <button class="view-btn" id="btn-view-mobile"><i class="fa-solid fa-mobile-screen-button"></i> Mobile (Card)</button>
+                                        </div>
+                                        <div class="responsive-view-container desktop-view" id="responsive-preview">
+                                            <!-- Responsive Table content will be injected by JS -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: STEP 2 - WORKFLOW V0 (TEMPLATE VS SCRATCH) -->
+            <section id="step2-section" class="content-section animate-fade-in">
+                <div class="section-header-box">
+                    <span class="step-indicator">Langkah 02</span>
+                    <h3>Alur Kerja v0.dev: Dua Pilihan Mulai</h3>
+                    <p>Pilih metode pembuatan project di v0 sesuai kebutuhan (Menggunakan template GitHub atau langsung generate dari nol).</p>
+                </div>
+
+                <div class="tab-control-container">
+                    <button class="tab-btn active" data-tab="tab-template">
+                        <i class="fa-brands fa-github text-primary"></i> Pilihan A: Menggunakan Template Github (Rekomendasi)
+                    </button>
+                    <button class="tab-btn" data-tab="tab-scratch">
+                        <i class="fa-solid fa-cube text-secondary"></i> Pilihan B: Generate Langsung (Scratch)
+                    </button>
+                </div>
+
+                <!-- Tab A: Template Github -->
+                <div id="tab-template" class="tab-content active-tab">
+                    <div class="card alert-box warning-alert">
+                        <div class="alert-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="alert-text">
+                            <strong>PENTING:</strong> Sebelum melakukan import di v0, pastikan Repository GitHub Anda diset ke <strong>PUBLIC</strong>, bukan Private. v0 tidak dapat membaca repository private tanpa autorisasi penuh.
+                        </div>
+                    </div>
+
+                    <div class="interactive-guide-steps">
+                        <!-- Card Step 1 -->
+                        <div class="guide-step-card">
+                            <div class="step-card-num">1</div>
+                            <div class="step-card-body">
+                                <h5>Persiapkan Repository GitHub</h5>
+                                <p>Pastikan boilerplate / template base code project Anda sudah di-push ke GitHub dan diset ke <strong>Public</strong>.</p>
+                                <div class="code-badge"><i class="fa-solid fa-globe"></i> visibility: public</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card Step 2 -->
+                        <div class="guide-step-card">
+                            <div class="step-card-num">2</div>
+                            <div class="step-card-body">
+                                <h5>Create Project & Import</h5>
+                                <p>Buka dashboard v0.dev, klik tombol <strong>"Create Project"</strong> lalu pilih menu <strong>"Import from GitHub"</strong>.</p>
+                                <div class="git-import-mock">
+                                    <div class="input-group">
+                                        <span class="prefix">https://github.com/</span>
+                                        <input type="text" value="username/my-dummy-template" readonly>
+                                        <button class="btn btn-secondary btn-sm">Import</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Step 3 -->
+                        <div class="guide-step-card">
+                            <div class="step-card-num">3</div>
+                            <div class="step-card-body">
+                                <h5>Masukkan Prompt & Referensi Komponen</h5>
+                                <p>Saat menulis prompt di chat v0, <strong>wajib beri referensi template</strong> agar AI menggunakan struktur component, style, dan config yang sama dengan template Anda.</p>
+                                <div class="prompt-ref-box">
+                                    <p class="ref-tag">💡 Gunakan frase ini di prompt:</p>
+                                    <code class="ref-code">"...gunakan style, layouting, dan custom UI components yang ada di repository template yang di-import..."</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab B: Scratch -->
+                <div id="tab-scratch" class="tab-content">
+                    <div class="card info-box">
+                        <div class="two-column align-center no-gap">
+                            <div>
+                                <h4>Membuat Project Tanpa Template (Dari Nol)</h4>
+                                <p>Cara ini sangat cocok untuk eksplorasi cepat ide baru tanpa terikat layout project sebelumnya.</p>
+                                <ul class="check-list">
+                                    <li><i class="fa-solid fa-check text-success"></i> Desain fleksibel, sepenuhnya diatur oleh instruksi prompt.</li>
+                                    <li><i class="fa-solid fa-check text-success"></i> Cocok untuk UI Dashboard standar/umum.</li>
+                                    <li><i class="fa-solid fa-check text-success"></i> Menggunakan default styling system v0 (Shadcn/UI + TailwindCSS).</li>
+                                </ul>
+                            </div>
+                            <div class="scratch-illustration">
+                                <div class="v0-prompt-mock">
+                                    <div class="mock-header">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                        <span class="title">v0.dev Prompt Box</span>
+                                    </div>
+                                    <div class="mock-body">
+                                        <div class="user-chat">Buatkan dashboard HR modern dengan tabel interaktif...</div>
+                                        <div class="ai-generating">
+                                            <i class="fa-solid fa-spinner fa-spin"></i> Generating components...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: STEP 3 - DEPLOY & LOCAL SYNC -->
+            <section id="step3-section" class="content-section animate-fade-in">
+                <div class="section-header-box">
+                    <span class="step-indicator">Langkah 03</span>
+                    <h3>Deploy Vercel & Sinkronisasi Lokal</h3>
+                    <p>Alur mempublikasikan dummy aplikasi dan cara menarik kode hasil v0 ke komputer lokal (VS Code / Cursor / Antigravity).</p>
+                </div>
+
+                <div class="two-column">
+                    <!-- Left: Step Deployment -->
+                    <div class="card">
+                        <h4>1. Deploy Instan ke Vercel</h4>
+                        <p>Setelah hasil generate v0 sesuai dengan keinginan Anda:</p>
+                        <div class="deploy-steps-visual">
+                            <div class="d-step">
+                                <div class="d-badge"><i class="fa-solid fa-rocket"></i></div>
+                                <div>
+                                    <h5>Klik Button Publish/Deploy</h5>
+                                    <p>Di pojok kanan atas v0, klik deploy ke Vercel.</p>
+                                </div>
+                            </div>
+                            <div class="d-step">
+                                <div class="d-badge"><i class="fa-brands fa-square-git"></i></div>
+                                <div>
+                                    <h5>Hubungkan ke GitHub</h5>
+                                    <p>v0 otomatis membuat branch atau repository baru di akun GitHub Anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Local Sync Git Workflow (INTERACTIVE GRAPH) -->
+                    <div class="card sync-card">
+                        <h4>2. Git Pipeline: v0 ke Komputer Lokal</h4>
+                        <p>Bagaimana cara melanjutkan coding di komputer lokal Anda?</p>
+
+                        <!-- Git Visualizer Interactive -->
+                        <div class="git-visualizer">
+                            <div class="git-nodes">
+                                <div class="git-node" id="g-node-v0">
+                                    <div class="git-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                    <span>v0.dev Code</span>
+                                </div>
+                                <div class="git-line-progress" id="git-line-1"></div>
+                                <div class="git-node" id="g-node-github">
+                                    <div class="git-icon"><i class="fa-brands fa-github"></i></div>
+                                    <span>PR / Main Branch</span>
+                                </div>
+                                <div class="git-line-progress" id="git-line-2"></div>
+                                <div class="git-node" id="g-node-local">
+                                    <div class="git-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                                    <span>Local (Cursor/PC)</span>
+                                </div>
+                            </div>
+                            <div class="git-action-display">
+                                <p id="git-action-text">Arahkan kursor atau klik node untuk melihat instruksi Git</p>
+                            </div>
+                        </div>
+
+                        <!-- Command Box -->
+                        <div class="cmd-box">
+                            <div class="cmd-header">
+                                <span>Terminal (Local bash)</span>
+                                <button class="btn-copy" id="btn-copy-cmd"><i class="fa-solid fa-copy"></i> Copy</button>
+                            </div>
+                            <div class="cmd-body">
+                                <code id="git-command-text">git clone [URL-REPOSITORI-GITHUB]</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: PLAYGROUND / GENERATOR -->
+            <section id="playground-section" class="content-section animate-fade-in">
+                <div class="section-header-box">
+                    <span class="step-indicator">Tools</span>
+                    <h3>Interactive Prompt Generator</h3>
+                    <p>Rancang prompt v0 Anda sendiri dengan opsi kustomisasi tinggi. Salin hasil prompt di bawah untuk langsung digunakan di AI atau v0.</p>
+                </div>
+
+                <div class="two-column">
+                    <!-- Left: Configuration Form -->
+                    <div class="card">
+                        <div class="card-header-flex">
+                            <h4>Konfigurasi Fitur Dummy</h4>
+                            <!-- Quick Templates Selection -->
+                            <div class="preset-selector">
+                                <span style="font-size:0.75rem; color:var(--text-secondary); margin-right:8px;">Preset Acuan:</span>
+                                <button class="btn btn-secondary btn-sm" id="btn-preset-gym">Seven Gym</button>
+                                <button class="btn btn-secondary btn-sm" id="btn-preset-custom">Custom</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Nama Sistem Aplikasi Dummy</label>
+                            <input type="text" id="p-app-name" value="" placeholder="Contoh: HR Management, Sewa Alat Berat">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tema Warna & Style Visual</label>
+                            <textarea id="p-color-theme" rows="2" style="width:100%; background:var(--bg-input); border:1px solid var(--border-color); padding:10px 14px; border-radius:var(--radius-sm); color:white; font-family:inherit; font-size:0.88rem; outline:none; resize:none;" placeholder="Contoh: Modern Premium Gym / Urban Fitness..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Daftar Role User (RBAC)</label>
+                            <input type="text" id="p-rbac" value="" placeholder="Contoh: Admin, Customer, Guest">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Prinsip UI & Layout Spesifik</label>
+                            <textarea id="p-ui-principles" rows="4" style="width:100%; background:var(--bg-input); border:1px solid var(--border-color); padding:10px 14px; border-radius:var(--radius-sm); color:white; font-family:inherit; font-size:0.88rem; outline:none; resize:none;" placeholder="Contoh: - Dashboard memakai cards&#10;- POS dengan katalog & cart&#10;- Booking dengan calendar..."></textarea>
+                        </div>
+
+                        <div class="form-group flex-row">
+                            <input type="checkbox" id="p-opt-search" checked>
+                            <label for="p-opt-search">Dropdown pencarian (Searchable Dropdown)</label>
+                        </div>
+
+                        <div class="form-group flex-row">
+                            <input type="checkbox" id="p-opt-responsive" checked>
+                            <label for="p-opt-responsive">Tabel responsive otomatis jadi Card saat Mobile</label>
+                        </div>
+
+                        <div class="form-group flex-row">
+                            <input type="checkbox" id="p-opt-template" checked>
+                            <label for="p-opt-template">Gunakan template import (TailAdmin Next.js React TS Tailwind)</label>
+                        </div>
+                    </div>
+
+                    <!-- Right: Result Preview -->
+                    <div class="card result-card">
+                        <div class="card-header-flex">
+                            <h4>Hasil Prompt v0 Anda</h4>
+                            <button class="btn btn-primary btn-sm" id="btn-copy-prompt"><i class="fa-solid fa-copy"></i> Copy Prompt</button>
+                        </div>
+                        <div class="prompt-output-container">
+                            <textarea id="prompt-output-textarea" readonly style="font-family: monospace; font-size: 0.78rem; height: 380px;"></textarea>
+                        </div>
+                        <div class="tip-box">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Tempel prompt ini ke <strong>v0.dev</strong> untuk meng-generate project yang siap di-deploy & disinkronkan ke komputer lokal!</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Quick Tour Guide Overlay -->
+    <div class="tour-overlay" id="tour-overlay">
+        <div class="tour-card">
+            <h4 id="tour-title">Judul Tour</h4>
+            <p id="tour-desc">Deskripsi Tour...</p>
+            <div class="tour-footer">
+                <button class="btn btn-secondary btn-sm" id="tour-prev">Sebelumnya</button>
+                <span id="tour-progress">1 / 4</span>
+                <button class="btn btn-primary btn-sm" id="tour-next">Lanjut</button>
+            </div>
+            <button class="tour-close-btn" id="tour-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- Script connection -->
+    <script src="app.js"></script>
+</body>
+</html>
