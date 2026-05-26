@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Force page to load from the very top
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) {
+        mainContent.scrollTop = 0;
+    }
+    window.scrollTo(0, 0);
+
     // 1. NAVIGATION & SIDEBAR SYSTEM
     const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('.content-section');
@@ -17,11 +27,16 @@ document.addEventListener('DOMContentLoaded', () => {
         sections.forEach(section => {
             if (section.id === targetId) {
                 section.classList.add('active-section');
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else {
                 section.classList.remove('active-section');
             }
         });
+
+        // Reset scroll position of main content container to the very top
+        const mainContent = document.querySelector('.main-content');
+        if (mainContent) {
+            mainContent.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     }
 
     navItems.forEach(item => {
