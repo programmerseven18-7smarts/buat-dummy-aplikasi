@@ -21,15 +21,18 @@
 
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar-nav">
             <div class="logo-area">
                 <div class="logo-icon">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </div>
-                <div>
+                <div class="logo-text-wrapper">
                     <h1 class="logo-title">v0 Guide</h1>
                     <span class="logo-subtitle">Interactive Dev Pipeline</span>
                 </div>
+                <button class="sidebar-close-btn" id="btn-close-sidebar" aria-label="Tutup Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
 
             <nav class="nav-menu">
@@ -65,9 +68,14 @@
         <main class="main-content">
             <!-- Header -->
             <header class="main-header">
-                <div class="header-title">
-                    <h2>Panduan Pembuatan Aplikasi Dummy</h2>
-                    <p class="subtitle">Alur kerja modern terintegrasi v0.dev, GitHub, Vercel, dan Local Environment</p>
+                <div class="header-left-group">
+                    <button class="menu-toggle-btn" id="btn-toggle-sidebar" aria-label="Buka Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="header-title">
+                        <h2>Panduan Pembuatan Aplikasi Dummy</h2>
+                        <p class="subtitle">Alur kerja modern terintegrasi v0.dev, GitHub, Vercel, dan Local Environment</p>
+                    </div>
                 </div>
                 <div class="header-actions">
                     <button class="btn btn-primary btn-icon" id="btn-start-tour">
@@ -538,6 +546,9 @@
             </section>
         </main>
     </div>
+
+    <!-- Backdrop for Mobile Sidebar -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
     <!-- Quick Tour Guide Overlay -->
     <div class="tour-overlay" id="tour-overlay">
