@@ -520,4 +520,35 @@ Buat struktur component yang rapi, reusable, dan modular menggunakan React/TypeS
             tourOverlay.style.display = 'none';
         }
     });
+
+    // 8. MOBILE SIDEBAR NAVIGATION TOGGLE
+    const btnToggleSidebar = document.getElementById('btn-toggle-sidebar');
+    const btnCloseSidebar = document.getElementById('btn-close-sidebar');
+    const sidebarNav = document.getElementById('sidebar-nav');
+    const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+
+    function openSidebar() {
+        sidebarNav?.classList.add('mobile-open');
+        sidebarBackdrop?.classList.add('mobile-open');
+        document.body.classList.add('sidebar-active');
+    }
+
+    function closeSidebar() {
+        sidebarNav?.classList.remove('mobile-open');
+        sidebarBackdrop?.classList.remove('mobile-open');
+        document.body.classList.remove('sidebar-active');
+    }
+
+    btnToggleSidebar?.addEventListener('click', openSidebar);
+    btnCloseSidebar?.addEventListener('click', closeSidebar);
+    sidebarBackdrop?.addEventListener('click', closeSidebar);
+
+    // Auto-close sidebar on mobile when a navigation menu item is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth <= 1024) {
+                closeSidebar();
+            }
+        });
+    });
 });
